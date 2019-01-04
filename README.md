@@ -7,7 +7,7 @@ https://malariajournal.biomedcentral.com/articles/10.1186/s12936-018-2413-3
 
 
 To compare the average number of the repeat units between the Asian and African samples, the sampling model for each repeat type: NAAG and NDAG, was generated as follow;
-
+$\lambda{}$
 $r_{ij} ~ poisson(\lambda{}_{jk})$
 $\lambda{}_{jk}∼normal(\mu_k,\sigma_k)$
 
