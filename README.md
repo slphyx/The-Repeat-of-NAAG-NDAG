@@ -4,3 +4,9 @@ Winbugs code for comparing the average number of the repeat units between the As
 ## Genetic polymorphisms in the circumsporozoite protein of Plasmodium malariae show a geographical bias
 by Saralamba N, et al.,Malaria Journal 2018
 https://malariajournal.biomedcentral.com/articles/10.1186/s12936-018-2413-3
+
+
+To compare the average number of the repeat units between the Asian and African samples, the sampling model for each repeat type: NAAG and NDAG, was generated as follow;
+$r_ij∼poisson(λ_jk)$
+$λ_jk∼normal(μ_k,σ_k)$
+where ri refer to the repeat number of the sample i, j indexes country and k indexes continent. The repeat numbers of each repeat type from the sample from any country was assumed to be sampled from a Poisson distribution where its average number was λ. These average numbers λ were thought to be varied between countries and also be distributed normally around the average numbers in the continent level (μ) with the standard deviation σ. 
