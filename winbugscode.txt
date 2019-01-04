@@ -1,0 +1,23 @@
+model{
+	# sample i
+	for(i in 1:143){
+		# protein p (1=NAAG, 2=NDAG)			
+		for(p in 1:2){
+			y[i,p] ~ dpois(lambda[country[i],p])
+		}
+	}
+	# country j 
+	for(j in 1:9){
+		for(p in 1:2){
+			lambda[j,p] ~ dnorm(mu[continent[j],p],tau[continent[j],p])I(0,)
+		}
+	}
+	# continent k (1=asia, 2=africa)
+	for(k in 1:2){
+		for(p in 1:2){
+			mu[k,p] ~ dunif(0,1000)
+			tau[k,p] <- 1/(sigma[k,p]*sigma[k,p])
+			sigma[k,p] ~ dunif(0,1000)
+		}
+	}	
+}
